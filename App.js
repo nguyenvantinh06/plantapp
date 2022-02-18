@@ -12,17 +12,17 @@ const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer headerMode="none">
       <Stack.Navigator
         screenOptions={{headerShown: false}}
         initialRouteName={"Home"}
       >
         {/* BottomTabNavigation */}
-        <Stack.Screen name="Home" component={TabBottom} />
+        <Stack.Screen name="Home" component={TabBottom} options={{headerShown: false,}} />
 
         {/* Screen */}
         <Stack.Screen name="PlantDetail" component={PlantDetail} options={{headerShown: false}} />
-        
+
       </Stack.Navigator>
     </NavigationContainer>
   );

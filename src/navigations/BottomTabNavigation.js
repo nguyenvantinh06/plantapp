@@ -3,7 +3,7 @@ import React from 'react';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 //Screen
-import {Home} from "../screens/index";
+import {Home, SearchScreen, BoxScreen, FavouriteScreen, CameraScreen} from "../screens/index";
 
 //Constant
 import {COLORS, icons} from "../constants"
@@ -13,7 +13,7 @@ const TabBottom = createBottomTabNavigator();
 const tabOptions = {
     showLabel: false,
     style: { 
-        height: "10%"
+        height: "20%"
     }
 }
 
@@ -49,7 +49,7 @@ const BottomTabNavigation = () => {
                     const tintColor = focused ? COLORS.primary : COLORS.grey;
 
                     switch (route.name) {
-                        case "HomeTab":
+                        case "Home":
                             return (
                                 <Image
                                     source={icons.flash}
@@ -102,33 +102,35 @@ const BottomTabNavigation = () => {
                                 />
                             )
                     }
-                }
+                },
+                headerShown: false
             })}
         
         >
             <TabBottom.Screen 
-                name="HomeTab"
+                name="Home"
                 component={Home}
+                
             />
 
             <TabBottom.Screen 
                 name="Box"
-                component={Home}
+                component={BoxScreen}
             />
 
             <TabBottom.Screen 
                 name="Camera"
-                component={Home}
+                component={CameraScreen}
             />
 
             <TabBottom.Screen 
                 name="Search"
-                component={Home}
+                component={SearchScreen}
             />
 
             <TabBottom.Screen 
                 name="Favourite"
-                component={Home}
+                component={FavouriteScreen}
             />
 
         </TabBottom.Navigator>
