@@ -6,7 +6,7 @@ import { NavigationContainer, DefaultTheme }  from '@react-navigation/native';
 import {PlantDetail} from "./src/screens";
 
 //BottomTabNavigation
-import TabBottom from "./src/navigations/BottomTabNavigation";
+import BottomTabNavigation from "./src/navigations/BottomTabNavigation";
 
 const Stack = createStackNavigator();
 
@@ -18,7 +18,7 @@ const App = () => {
         initialRouteName={"Home"}
       >
         {/* BottomTabNavigation */}
-        <Stack.Screen name="Home" component={TabBottom} options={{headerShown: false,}} />
+        <Stack.Screen name="Home" component={BottomTabNavigation} options={{headerShown: false,}} />
 
         {/* Screen */}
         <Stack.Screen name="PlantDetail" component={PlantDetail} options={{headerShown: false}} />
