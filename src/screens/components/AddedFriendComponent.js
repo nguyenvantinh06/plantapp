@@ -95,7 +95,7 @@ const AddedFriendComponent = () => {
   return (
     <View style={styles.container}>
       
-      <View style={{marginTop: SIZES.radius, marginHorizontal: SIZES.padding}} >
+      <View style={{marginVertical: SIZES.radius, marginHorizontal: SIZES.padding}} >
         {/* Content Text */}
         <Text style={{color: COLORS.secondary, ...FONTS.h2}}>Added Friends</Text>
         <Text style={{color: COLORS.secondary, ...FONTS.body3}}>5 Total</Text>
