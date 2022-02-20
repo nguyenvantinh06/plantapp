@@ -11,13 +11,13 @@ Android: Android 4.0+ (best with 8.1+)
 ## Design File
 
 <p align="center">
-<img src="src/assets/frame_4x.PNG" width="400" height="720">
+<img src="src/assets/frame_4x.jpg" width="400" height="720">
 </p>
 <p align="center">
-<img src="src/assets/plant_home.PNG" width="400" height="720">
+<img src="src/assets/plant_home.jpg" width="400" height="720">
 </p>
 <p align="center">
-<img src="src/assets/home_detail.PNG" width="400" height="720">
+<img src="src/assets/home_detail.jpg" width="400" height="720">
 </p>
 
 ## Some Screenshots
