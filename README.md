@@ -49,6 +49,6 @@ Server deploy: Heroku
 
 Server stores files and images: Cloudinary -->
 
-## Team member
+## Member
 
 [@nguyenvantinh06](https://github.com/nguyenvantinh06)
