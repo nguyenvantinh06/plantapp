@@ -14,10 +14,7 @@ Android: Android 4.0+ (best with 8.1+)
 <img src="screenshots/screenhome.PNG" width="400" height="720">
 </p>
 <p align="center">
-<img src="Screenshots/screenplantdetail.PNG" width="400" height="720">
-</p>
-<p align="center">
-<img src="Screenshots/Login.PNG" width="400" height="720">
+<img src="screenshots/screenplantdetail.PNG" width="400" height="720">
 </p>
 
 <!-- ## Download and installing
