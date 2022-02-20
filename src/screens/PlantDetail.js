@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
-
+import {useNavigation} from "@react-navigation/native";
 //Constant
 import {images, COLORS, SIZES, FONTS, icons} from "../../src/constants";
 
@@ -81,7 +81,7 @@ const RequirementDetail = (props) => {
 }
 
 const PlantDetail = () => {
-
+  const navigation = useNavigation();
   //Render
   function renderRequirementsBar() {
     return (
@@ -142,6 +142,93 @@ const PlantDetail = () => {
     )
   }
 
+  function renderFooter() {
+    return (
+      <View style={{flex:1, flexDirection: "row", paddingVertical: SIZES.base }}>
+        <TouchableOpacity 
+          style={{
+            flex:1,
+            flexDirection: "row",
+            paddingHorizontal: SIZES.padding,
+            alignItems: "center",
+            justifyContent: "center",
+            borderTopRightRadius: 30,
+            borderBottomRightRadius: 30,
+            backgroundColor: COLORS.primary
+          }}
+          onPress={() => { console.log("Take Action Pressed")}}
+          > 
+          <Text style={{color: COLORS.white, ...FONTS.h2}}>Take Action</Text>
+          <Image 
+            source={icons.chevron}
+            resizeMode="contain"
+            style={{width:20, height: 20, marginLeft: SIZES.padding}}
+          />
+        </TouchableOpacity>
+        <View style={{flex:1, flexDirection: "row", alignItems: "center", justifyContent:"center", paddingHorizontal: SIZES.padding}}>
+          <Text style={{color: COLORS.gray}}>Almost 2 weeks of growing time</Text>
+          <Image 
+            source={icons.downArrow}
+            resizeMode="contain"
+            style={{width:20, height: 20, tintColor:COLORS.gray, marginLeft: SIZES.base}}
+          />
+        </View>
+      </View>
+    )
+  }
+
+  function renderHeader() {
+    return (
+      <View 
+        style={{
+          position:"absolute",
+          top: 50,
+          left: SIZES.padding,
+          right: SIZES.padding
+        }}>
+        <View style={{flexDirection:"row"}}>
+          <View style={{flex:1}}>
+            <TouchableOpacity 
+              style={{
+                width:40,
+                height: 40,
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 20,
+                backgroundColor: 'rgba(255,255,255,0.5)'
+              }}
+              onPress={() => { navigation.navigate("Home") }}
+              >
+              <Image
+                source={icons.back}
+                resizeMode="contain"
+                style={{
+                  width: 20,
+                  height: 20
+                }}
+              />
+            </TouchableOpacity>
+          </View>
+
+          <TouchableOpacity
+            style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'center' }}
+            onPress={() => { console.log("Focus on pressed") }}
+          >
+            <Image
+              source={icons.focus}
+              resizeMode="contain"
+              style={{
+                width: 25,
+                height: 25
+              }}
+            />
+          </TouchableOpacity>
+
+        </View>
+      </View>
+    )
+  }
+
   return (
     <View style={styles.container}>
       {/* Banner Photo */}
@@ -154,7 +241,9 @@ const PlantDetail = () => {
         <Text style={{paddingHorizontal: SIZES.padding, color: COLORS.secondary, ...FONTS.h2}}>Requirements</Text>
         {renderRequirementsBar()}
         {renderRequirements()}
+        {renderFooter()}
       </View>
+      {renderHeader()}
     </View>
   )
 }

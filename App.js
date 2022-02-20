@@ -13,6 +13,7 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer headerMode="none">
+      <StatusBar style="light" />
       <Stack.Navigator
         screenOptions={{headerShown: false}}
         initialRouteName={"Home"}
